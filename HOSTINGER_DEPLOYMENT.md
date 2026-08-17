@@ -25,7 +25,7 @@
 NEXT_PUBLIC_SITE_URL=https://complisera.com
 NEXT_PUBLIC_SUPABASE_URL=https://ugeqcegfukjszrznaabu.supabase.co
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=<Supabase publishable key>
-SUPABASE_SERVICE_ROLE_KEY=<Supabase server-only service role key>
+SUPABASE_SECRET_KEY=<Supabase server-only secret key>
 ```
 
 Add these only when the related providers are activated:
@@ -39,6 +39,8 @@ SUPPORT_EMAIL=
 ```
 
 Never commit secret values to GitHub. Store them in Hostinger's Environment Variables.
+The legacy `SUPABASE_SERVICE_ROLE_KEY` name remains supported as a temporary fallback,
+but new deployments should use a revocable `sb_secret_...` key.
 
 ## Supabase configuration
 
